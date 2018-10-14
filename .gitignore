@@ -1,0 +1,11 @@
+*.swp
+*.bak
+*.tmp
+*.swo
+*.exe
+*.exe~
+
+client
+server
+b/
+tmp/
