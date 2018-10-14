@@ -1,5 +1,5 @@
 # filesync
-使用http同步文件
+使用http websocket以文件粒度双向同步目录
 
 ## 使用
 * 安装依赖
