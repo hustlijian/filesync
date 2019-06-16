@@ -22,7 +22,7 @@ import (
 var addr = flag.String("addr", "localhost:8088", "http service address")
 var root = flag.String("root", "tmp", "localdir to sync")
 var token = flag.String("token", "XXXXXXX", "token check")
-var uri= flag.String("uri", "echo", "uri")
+var uri = flag.String("uri", "echo", "uri")
 
 var upgrader = websocket.Upgrader{} // use default options
 
@@ -101,6 +101,7 @@ func echo(w http.ResponseWriter, r *http.Request) {
 			if err != nil {
 				panic(err)
 			}
+			continue
 		} else if request.Cmd == comm.DeleteFile {
 			path := filepath.Join(*root, request.Name)
 			log.Println("delete file ", path)
@@ -108,6 +109,7 @@ func echo(w http.ResponseWriter, r *http.Request) {
 			if err != nil {
 				panic(err)
 			}
+			continue
 		}
 
 		// 校验删除文件

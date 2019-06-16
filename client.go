@@ -28,7 +28,7 @@ var encrypt = flag.Bool("encrpt", false, "encrypt or not")
 var root = flag.String("root", "b", "localdir to sync")
 var token = flag.String("token", "XXXXXXX", "token check")
 var cycle = flag.Int("cycle", 3, "cycle to check")
-var uri= flag.String("uri", "echo", "uri")
+var uri = flag.String("uri", "echo", "uri")
 
 func main() {
 	flag.Parse()
@@ -39,7 +39,7 @@ func main() {
 	if *encrypt {
 		scheme = "wss"
 	}
-	u := url.URL{Scheme: scheme, Host: *addr, Path: "/"+*uri}
+	u := url.URL{Scheme: scheme, Host: *addr, Path: "/" + *uri}
 	log.Printf("connecting to %s", u.String())
 
 	c, _, err := websocket.DefaultDialer.Dial(u.String(), nil)
