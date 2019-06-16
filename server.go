@@ -101,7 +101,7 @@ func echo(w http.ResponseWriter, r *http.Request) {
 			if err != nil {
 				panic(err)
 			}
-			continue
+			continue // 接收完数据，直接返回
 		} else if request.Cmd == comm.DeleteFile {
 			path := filepath.Join(*root, request.Name)
 			log.Println("delete file ", path)
@@ -109,7 +109,7 @@ func echo(w http.ResponseWriter, r *http.Request) {
 			if err != nil {
 				panic(err)
 			}
-			continue
+			continue // 接收完数据，直接返回
 		}
 
 		// 校验删除文件
