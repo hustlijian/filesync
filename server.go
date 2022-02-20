@@ -14,7 +14,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"filesync/comm"
+	"github.com/hustlijian/filesync/comm"
 
 	"github.com/gorilla/websocket"
 )

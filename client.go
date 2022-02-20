@@ -18,7 +18,7 @@ import (
 	"sync"
 	"time"
 
-	"filesync/comm"
+	"github.com/hustlijian/filesync/comm"
 
 	"github.com/gorilla/websocket"
 )
